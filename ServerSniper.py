@@ -1,0 +1,44 @@
+import random
+import time
+from rich.console import Console
+
+console = Console()
+
+def banner():
+    console.print("""
+[bold green]
+██████╗ ██╗ ██████╗ ███╗   ██╗ █████╗ ██╗   ██╗███████╗
+██╔══██╗██║██╔═══██╗████╗  ██║██╔══██╗╚██╗ ██╔╝██╔════╝
+██████╔╝██║██║   ██║██╔██╗ ██║███████║ ╚████╔╝ ███████╗
+██╔══██╗██║██║   ██║██║╚██╗██║██╔══██║  ╚██╔╝  ╚════██║
+██║  ██║██║╚██████╔╝██║ ╚████║██║  ██║   ██║   ███████║
+╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
+[/bold green]
+""")
+    console.print("[bold red]RIONAYS SERVER SNIPER v1.0 | ULTRA SCAN MODE[/bold red]\n")
+
+def fake_scan():
+    while True:
+        scanned = random.randint(18000, 22000)
+        server_id = random.randint(1000000000, 9999999999)
+        ping = random.randint(5, 95)
+        players = random.randint(1, 30)
+
+        console.print(
+            f"[cyan]Scanning[/cyan] {scanned} servers/sec | "
+            f"[yellow]ServerID:[/yellow] {server_id} | "
+            f"[green]Ping:[/green] {ping}ms | "
+            f"[magenta]Players:[/magenta] {players}/30"
+        )
+
+        time.sleep(0.15)
+
+def main():
+    banner()
+    input("Target Username: ")
+    console.print("\n[red]Initializing Quantum Scan Engine...[/red]\n")
+    time.sleep(1)
+    fake_scan()
+
+if __name__ == "__main__":
+    main()
